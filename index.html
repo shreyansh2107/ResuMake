@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResuMake</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container" id="cv-form">
+        <h1 class="text-center"> <i class="material-icons" style="font-size:30px;">article</i> ResuMake</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Personal Information</h3>
+                <div class="form-group mt-2">
+                    <label for="namefield">Your Name</label>
+                    <input type="text" id="namefield" placeholder="Enter Here" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="contactfield">Your Contact Number</label>
+                    <input type="text" id="contactfield" placeholder="Enter Here" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="addressfield">Your Address</label>
+                    <textarea id="addressfield" placeholder="Enter Here" class="form-control"></textarea>
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="image">Image</label>
+                    <input type="file" id="imgfield" placeholder="Enter Here" class="form-control">
+                </div>
+
+                <p class="text-secondary my-3">Important Links</p>
+
+                <div class=" form-group mt-2 ">
+                    <label for="fbfield">Facebook</label>
+                    <input type="text " id="fbfield" placeholder="Enter Here " class="form-control ">
+                </div>
+
+                <div class="form-group mt-2 ">
+                    <label for="instafield">Gmail</label>
+                    <input type="text " id="instafield" placeholder="Enter Here " class="form-control ">
+                </div>
+
+                <div class="form-group mt-2 ">
+                    <label for="linkedfield">LinkedIn</label>
+                    <input type="text " id="linkedfield" placeholder="Enter Here " class="form-control ">
+                </div>
+
+            </div>
+            <div class="col-md-6 ">
+                <h3>Professional Information</h3>
+
+                <div class="form-group mt-2 ">
+                    <label for=" ">Objective </label>
+                    <textarea id="objectivefield" rows="5 " placeholder="Enter Here " class="form-control weField "></textarea>
+                </div>
+
+                <div class="form-group mt-2" id="we">
+                    <label for=" ">Work Experience</label>
+                    <textarea id=" " rows="3" placeholder="Enter Here " class="form-control weField"></textarea>
+
+                    <div class="container text-center mt-2" id="weAddButton">
+                        <button onclick="addNewWEField()" class="btn btn-primary btn-sm ">Add</button>
+                    </div>
+                </div>
+
+                <div class="form-group mt-2 " id="aq">
+                    <label for=" ">Academic Qualification</label>
+                    <textarea id=" " rows="3 " placeholder="Enter Here " class="form-control eqField"></textarea>
+
+                    <div class="container text-center mt-2" id="aqAddButton">
+                        <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center mt-3">
+            <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+        </div>
+    </div>
+
+    <div class="container" id="cv-template">
+
+        <div class="row ">
+            <div class="col-md-4 text-center py-5 background">
+
+                <img id="images" class="img-fluid" src="https://pbs.twimg.com/media/DAseMrEXcAEu_8P.jpg" alt=" ">
+
+                <div class="container ">
+                    <h1 class="pb-1" id="nameT1">Shreyansh Mehra</h1>
+                    <h4 class="pb-1" id="contactT">+91-9617543882</h4>
+                    <h5 id="addressT">hno.372, Ashok Vihar, Bhopal </h5>
+
+                    <hr>
+
+                    <p><a id="fbT" href="#1">Facebook</a></p>
+                    <p><a id="instaT" href="#2 ">Gmail</a></p>
+                    <p><a id="linkedT" href="#3 ">LinkedIn</a></p>
+                </div>
+
+            </div>
+
+            <div class="col-md-8 py-5">
+                <h1 id="nameT2" class="text-center" style="font-weight: 980 ">Shreyansh Mehra</h1>
+
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Objective</h3>
+                    </div>
+                    <div id="objectiveT" class="card-body text-dark">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim expedita omnis dolorem quas ut modi reprehenderit exercitationem nesciunt suscipit at cupiditate illum error minima sequi aliquam libero consequuntur nam, minus nulla
+                            maxime! Natus totam accusantium dolore ab accusamus. Asperiores explicabo iure sed ut voluptates? Veniam dolorem similique ab soluta sunt?</p>
+                    </div>
+                </div>
+
+                <!-- Work Experience -->
+
+                <div class="card mt-4 ">
+                    <div class="card-header background">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body text-dark">
+                        <ul id="weT">
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, commodi?
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, commodi?
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, commodi?
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Academic Qualification -->
+ 
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Academic Qualification</h3>
+                    </div>
+                    <div class="card-body text-dark">
+                        <ul id="aqT">
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, commodi?
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, commodi?
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, commodi?
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="container mt-3 text-center">
+                    <button onclick="printCV()" class="btn background ">Print CV</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
+    <script src="app.js "></script>
+</body>
+
+</html>
